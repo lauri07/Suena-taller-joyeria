@@ -5,7 +5,7 @@
   <div class="type"><span>TIPOGRAFÍAS</span><span>TÍTULOS</span><b>Aa</b><b>Aa</b></div>
   <div class="values"><div>♢<small>ARTESANÍA</small></div><div>♡<small>CONFIANZA</small></div><div>⌕<small>DETALLE</small></div><div>♡<small>PASIÓN</small></div></div>
   <div class="sidebar-note">CADA JOYA CUENTA UNA HISTORIA.<br> NOSOTROS LA HACEMOS ETERNA.</div>
-  <a class="side-wa" href="https://wa.me/34633208782?text=Hola%20Sue%C3%B1a%2C%20quiero%20informaci%C3%B3n%20sobre%20una%20joya." target="_blank">WhatsApp<br><strong>698988498</strong></a>
+  <a class="side-wa" href="https://wa.me/34698988498?text=Hola%20Sue%C3%B1a%2C%20quiero%20informaci%C3%B3n%20sobre%20una%20joya." target="_blank">WhatsApp<br><strong>698988498</strong></a>
 </aside>
 <main class="main">
 <header class="nav"><a href="#inicio">INICIO</a><a href="#sobre-nosotros">SOBRE NOSOTROS</a><a href="#servicios">SERVICIOS</a><a href="#galeria">GALERÍA</a><a href="#contacto">CONTACTO</a></header>
@@ -33,7 +33,7 @@
 const items=[
  ['joya-1.jpeg','Pulsera artesanal','pulseras'],['joya-2.jpeg','Pulsera del amor','pulseras'],['joya-3.jpeg','Pulsera de plata','pulseras'],['joya-4.jpeg','Colgante cruz multicolor','colgantes'],['joya-5.jpeg','Joya artesanal','sortijas'],['joya-6.jpeg','Pasadores hermandad de la Candelaria','pasadores'],['joya-7.jpeg','Pasadores hermandad de la coronación','pasadores'],['joya-8.jpeg','Pulsera con piedra roja','pulseras'],['joya-9.jpeg','Pulsera de plata','pulseras'],['joya-10.jpeg','Pasadores cruz de Santiago','pasadores'],['joya-11.jpeg','Pulsera plata artesanal','pulseras'],['joya-12.jpeg','Pulsera artesanal','pulseras'],['joya-09.jpeg','Pulsera plata','pulseras'],['joya-10.jpeg','Pasadores cruz de Santiago','pasadores'],['joya-12.jpeg','Pulsera artesanal','pulseras']
 ];
-const wa=t=>`https://wa.me/34633208782?text=${encodeURIComponent('Hola Sueña, quiero información sobre: '+t)}`;
+const wa=t=>`https://wa.me/34698988498?text=${encodeURIComponent('Hola Sueña, quiero información sobre: '+t)}`;
 const root=document.getElementById('jewels');
 function render(cat='todas'){root.innerHTML=items.filter(x=>cat==='todas'||x[2]===cat).map(x=>`<article class="jewel"><img src="assets/${x[0]}" alt="${x[1]}"><div><small>${x[2]}</small><h3>${x[1]}</h3><a class="wa" href="${wa(x[1])}" target="_blank">WHATSAPP · INFO</a></div></article>`).join('')}
 render();document.querySelectorAll('.filters button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.filters button').forEach(x=>x.classList.remove('active'));b.classList.add('active');render(b.dataset.cat)});
