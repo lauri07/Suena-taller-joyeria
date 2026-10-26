@@ -35,6 +35,6 @@ const items=[
 ];
 const wa=t=>`https://wa.me/34698988498?text=${encodeURIComponent('Hola Sueña, quiero información sobre: '+t)}`;
 const root=document.getElementById('jewels');
-function render(cat='todas'){root.innerHTML=items.filter(x=>cat==='todas'||x[2]===cat).map(x=>`<article class="jewel"><img src="assets/${x[0]}" alt="${x[1]}"><div><small>${x[2]}</small><h3>${x[1]}</h3><a class="wa" href="${wa(x[1])}" target="_blank">WHATSAPP · INFO</a></div></article>`).join('')}
+function render(cat='todas'){root.innerHTML=items.filter(x=>cat==='todas'||x[2]===cat).map(x=>`<article class="jewel"><img src="${x[0]}" alt="${x[1]}"><div><small>${x[2]}</small><h3>${x[1]}</h3><a class="wa" href="${wa(x[1])}" target="_blank">WHATSAPP · INFO</a></div></article>`).join('')}
 render();document.querySelectorAll('.filters button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.filters button').forEach(x=>x.classList.remove('active'));b.classList.add('active');render(b.dataset.cat)});
 </script></body></html>
