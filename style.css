@@ -30,3 +30,30 @@ img, video {
 max-width: 100%;
 }
 }
+@media screen and (max-width: 768px) {
+.hero {
+width: 100% !important;
+max-width: 100% !important;
+min-width: 0 !important;
+margin: 0 !important;
+overflow: hidden;
+background-size: 100% auto !important;
+background-position: center top !important;
+background-repeat: no-repeat !important;
+}
+
+.hero-copy {
+width: 100%;
+max-width: 100%;
+box-sizing: border-box;
+}
+
+.main,
+main {
+width: 100%;
+max-width: 100%;
+min-width: 0;
+margin: 0;
+box-sizing: border-box;
+}
+}
