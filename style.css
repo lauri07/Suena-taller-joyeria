@@ -95,3 +95,64 @@ flex-wrap: nowrap;
 white-space: nowrap;
 }
 }
+/* ADAPTACIÓN MÓVIL - SUEÑA */
+@media (max-width: 768px) {
+
+/* Portada */
+.hero {
+width: 100%;
+min-height: 0;
+height: auto;
+aspect-ratio: 4 / 3;
+background-size: contain;
+background-position: center center;
+background-repeat: no-repeat;
+}
+
+/* Tarjetas de servicios y galería */
+.services-grid,
+.service-grid,
+.gallery-grid,
+.products-grid {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 10px;
+}
+
+/* Evitar que las tarjetas se salgan de la pantalla */
+.service-card,
+.services-grid > *,
+.service-grid > *,
+.gallery-grid > *,
+.products-grid > * {
+min-width: 0;
+max-width: 100%;
+}
+
+/* Imágenes */
+.service-card img,
+.services-grid img,
+.service-grid img,
+.gallery-grid img,
+.products-grid img {
+width: 100%;
+height: auto;
+object-fit: cover;
+}
+
+/* Texto de las tarjetas */
+.service-card h2,
+.service-card h3 {
+font-size: 19px;
+}
+
+.service-card p {
+font-size: 14px;
+line-height: 1.5;
+}
+
+/* Evitar desbordamientos horizontales */
+body {
+max-width: 100%;
+overflow-x: hidden;
+}
+}
